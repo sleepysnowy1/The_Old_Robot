@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IRobotCommand.cs" />
     <Compile Include="Classes\Robot.cs" />
     <Compile Include="Classes\RobotCommand.cs" />
     <Compile Include="Program.cs" />

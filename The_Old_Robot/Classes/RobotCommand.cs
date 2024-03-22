@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace The_Old_Robot.Classes
 {
-    internal abstract class RobotCommand
-    {
-        public abstract void Run(Robot robot);
-    }
 
-    internal class OnCommand : RobotCommand
+
+    internal class OnCommand : IRobotCommand
     {
-        public override void Run(Robot robot)
+        public void Run(Robot robot)
         {
 
             if (robot.IsPowered == false)
@@ -23,9 +20,9 @@ namespace The_Old_Robot.Classes
         }
     }
 
-    internal class OffCommand : RobotCommand
+    internal class OffCommand : IRobotCommand
     {
-        public override void Run(Robot robot)
+        public void Run(Robot robot)
         {
             if(robot.IsPowered == true)
             {
@@ -34,9 +31,9 @@ namespace The_Old_Robot.Classes
         }
     }
 
-    internal class NorthCommand : RobotCommand
+    internal class NorthCommand : IRobotCommand
     {
-        public override void Run(Robot robot)
+        public void Run(Robot robot)
         {
             if (robot.IsPowered == true)
             {
@@ -45,9 +42,9 @@ namespace The_Old_Robot.Classes
         }
     }
 
-    internal class SouthCommand : RobotCommand
+    internal class SouthCommand : IRobotCommand
     {
-        public override void Run(Robot robot)
+        public void Run(Robot robot)
         {
             if (robot.IsPowered == true)
             {
@@ -56,9 +53,9 @@ namespace The_Old_Robot.Classes
         }
     }
 
-    internal class WestCommand : RobotCommand
+    internal class WestCommand : IRobotCommand
     {
-        public override void Run(Robot robot)
+        public  void Run(Robot robot)
         {
             if (robot.IsPowered == true)    
             {
@@ -67,9 +64,9 @@ namespace The_Old_Robot.Classes
         }
     }
 
-    internal class EastCommand : RobotCommand
+    internal class EastCommand : IRobotCommand
     {
-        public override void Run(Robot robot)
+        public  void Run(Robot robot)
         {
             if (robot.IsPowered == true)
             {
